@@ -1,3 +1,7 @@
+// ⚡️ Fiber is an Express inspired web framework written in Go with ☕️
+// 🤖 Github Repository: https://github.com/gofiber/fiber
+// 📌 API Documentation: https://docs.gofiber.io
+
 package main
 
 import (
@@ -27,8 +31,8 @@ func main() {
 
 	todos := []Todo{}
 
-	app.Get("/check", func(c *fiber.Ctx) error {
-		return c.SendString(("OK"))
+	app.Get("/servercheck", func(c *fiber.Ctx) error {
+		return c.SendString(("Checked Server!"))
 	})
 
 	app.Post("/api/todos", func(c *fiber.Ctx) error {
@@ -65,9 +69,9 @@ func main() {
 		return c.JSON(todos)
 	})
 
-	app.Delete(("/api/todos/:id"), func(c *fiber.Ctx) error {
+	// app.Delete(("/api/todos/:id"), func(c *fiber.Ctx) error {
 
-	})
+	// })
 
 	log.Fatal(app.Listen(":8080"))
 
