@@ -20,7 +20,7 @@ type Todo struct {
 }
 
 func main() {
-	fmt.Print("That's OK")
+	fmt.Print("main func started here")
 
 	app := fiber.New()
 
