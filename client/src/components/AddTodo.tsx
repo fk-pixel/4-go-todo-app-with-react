@@ -9,8 +9,8 @@ function AddTodo({ mutate }: { mutate: KeyedMutator<Todo[]> }) {
 
   const form = useForm({
     initialValues: {
-      title: "",
-      body: "",
+      title: "Test",
+      body: "test1",
     },
   });
 
